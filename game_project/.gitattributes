@@ -1,0 +1,8 @@
+# Define como tratar os arquivos do GameMaker
+*.yy text
+*.yyp text
+*.yyz binary
+*.png binary
+*.wav binary
+*.ogg binary
+*.mp3 binary
