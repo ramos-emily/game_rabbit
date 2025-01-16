@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"Spr_obstaculo",
-    "path":"sprites/Spr_obstaculo/Spr_obstaculo.yy",
+    "name":"spr_obstaculo",
+    "path":"sprites/spr_obstaculo/spr_obstaculo.yy",
   },
   "spriteMaskId":null,
   "visible":true,

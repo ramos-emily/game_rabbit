@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_telaInicial",
+  "%Name":"obj_setaDireita",
   "eventList":[],
   "managed":true,
-  "name":"obj_telaInicial",
+  "name":"obj_setaDireita",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_telaInicial",
-    "path":"sprites/spr_telaInicial/spr_telaInicial.yy",
+    "name":"spr_setaDireita",
+    "path":"sprites/spr_setaDireita/spr_setaDireita.yy",
   },
   "spriteMaskId":null,
   "visible":true,

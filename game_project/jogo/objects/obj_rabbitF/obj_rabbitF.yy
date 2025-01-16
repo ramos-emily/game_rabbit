@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_rabbitF",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_rabbitM","path":"objects/obj_rabbitM/obj_rabbitM.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_rabbitF",
   "overriddenProperties":[],
@@ -30,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Spr_rabbitF",
-    "path":"sprites/Spr_rabbitF/Spr_rabbitF.yy",
+    "name":"spr_rabbitF",
+    "path":"sprites/spr_rabbitF/spr_rabbitF.yy",
   },
   "spriteMaskId":null,
   "visible":true,

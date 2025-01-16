@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_telaInicial",
+  "%Name":"obj_setaBaixo",
   "eventList":[],
   "managed":true,
-  "name":"obj_telaInicial",
+  "name":"obj_setaBaixo",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_telaInicial",
-    "path":"sprites/spr_telaInicial/spr_telaInicial.yy",
+    "name":"spr_setaBaixo",
+    "path":"sprites/spr_setaBaixo/spr_setaBaixo.yy",
   },
   "spriteMaskId":null,
   "visible":true,

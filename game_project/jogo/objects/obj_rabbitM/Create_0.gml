@@ -1,10 +1,11 @@
-// Direção inicial (0=Cima, 1=Direita, 2=Baixo, 3=Esquerda)
-direction = 1; 
+// Evento Create
+velocidade = 4;  // Define a velocidade do movimento
+passo_x = 2;     // Inicialmente sem movimento horizontal
+passo_y = 0;     // Inicialmente sem movimento vertical
 
-// Velocidade de movimento
-speed = 4;
 
-// Posição inicial
-x_start = x;
-y_start = y;
-
+// Definindo limites da área de movimento (ajuste conforme necessário)
+limite_esquerda = 15;
+limite_direita = 287;
+limite_superior = 30;
+limite_inferior = 185;
