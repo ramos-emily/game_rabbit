@@ -34,6 +34,7 @@
   },
   "name":"game_v1",
   "resources":[
+    {"id":{"name":"obj_go","path":"objects/obj_go/obj_go.yy",},},
     {"id":{"name":"obj_obstaculo","path":"objects/obj_obstaculo/obj_obstaculo.yy",},},
     {"id":{"name":"obj_rabbitF","path":"objects/obj_rabbitF/obj_rabbitF.yy",},},
     {"id":{"name":"obj_rabbitM","path":"objects/obj_rabbitM/obj_rabbitM.yy",},},
@@ -43,6 +44,7 @@
     {"id":{"name":"obj_setaEsquerda","path":"objects/obj_setaEsquerda/obj_setaEsquerda.yy",},},
     {"id":{"name":"obj_telaInicial","path":"objects/obj_telaInicial/obj_telaInicial.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"spr_go","path":"sprites/spr_go/spr_go.yy",},},
     {"id":{"name":"spr_obstaculo","path":"sprites/spr_obstaculo/spr_obstaculo.yy",},},
     {"id":{"name":"spr_rabbitF","path":"sprites/spr_rabbitF/spr_rabbitF.yy",},},
     {"id":{"name":"spr_rabbitM","path":"sprites/spr_rabbitM/spr_rabbitM.yy",},},

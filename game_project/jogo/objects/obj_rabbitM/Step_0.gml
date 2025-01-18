@@ -1,42 +1,41 @@
-// Evento Step
-var tamanho_bloco = 2;  // Definindo o tamanho do bloco (ajustado para 15px)
-var velocidade = 0.1;    // A velocidade de movimento, quanto menor, mais lento o movimento
+// Movimento só ocorre se 'em_movimento' for verdadeiro
+if (em_movimento) {
+    // Movimenta o coelho com base na direção e velocidade
+    x += passo_x * velocidade;
+    y += passo_y * velocidade;
 
-// Verifica a colisão com as setas para mudar a direção
-if (place_meeting(x + tamanho_bloco, y, obj_setaDireita)) {
-    passo_x = tamanho_bloco;  // Muda para a direita
-    passo_y = 0;               // Não se move verticalmente
-} 
-else if (place_meeting(x - tamanho_bloco, y, obj_setaEsquerda)) {
-    passo_x = -tamanho_bloco; // Muda para a esquerda
-    passo_y = 0;               // Não se move verticalmente
-} 
-else if (place_meeting(x, y - tamanho_bloco, obj_setaCima)) {
-    passo_x = 0;               // Não se move horizontalmente
-    passo_y = -tamanho_bloco;  // Muda para cima
-}
-else if (place_meeting(x, y + tamanho_bloco, obj_setaBaixo)) {
-    passo_x = 0;               // Não se move horizontalmente
-    passo_y = tamanho_bloco;   // Muda para baixo
-}
+    // Calcula o centro do coelho
+    var centro_coelho_x = x + sprite_width / 2;
+    var centro_coelho_y = y + sprite_height / 2;
 
-// Empurra o coelho até encontrar um obstáculo ou o limite da tela
-if (passo_x != 0 || passo_y != 0) {
-    // Movimenta o coelho com a velocidade ajustada
-    x += passo_x * velocidade;  // Move o coelho na direção x
-    y += passo_y * velocidade;  // Move o coelho na direção y
-}
+    // Checa se o centro do coelho está sobre uma seta
+    var seta_encontrada = instance_place(centro_coelho_x, centro_coelho_y, obj_setaDireita) ||
+                          instance_place(centro_coelho_x, centro_coelho_y, obj_setaEsquerda) ||
+                          instance_place(centro_coelho_x, centro_coelho_y, obj_setaCima) ||
+                          instance_place(centro_coelho_x, centro_coelho_y, obj_setaBaixo);
 
-// Limita a área de movimento (gramado)
-if (x < limite_esquerda) {
-    x = limite_esquerda; // Coelho não passa do limite esquerdo
-}
-if (x > limite_direita) {
-    x = limite_direita; // Coelho não passa do limite direito
-}
-if (y < limite_superior) {
-    y = limite_superior; // Coelho não passa do limite superior
-}
-if (y > limite_inferior) {
-    y = limite_inferior; // Coelho não passa do limite inferior
+    if (seta_encontrada) {
+        // Muda a direção do coelho com base na seta encontrada
+        if (instance_place(centro_coelho_x, centro_coelho_y, obj_setaDireita)) {
+            passo_x = tamanho_bloco;
+            passo_y = 0;
+        } 
+        else if (instance_place(centro_coelho_x, centro_coelho_y, obj_setaEsquerda)) {
+            passo_x = -tamanho_bloco;
+            passo_y = 0;
+        } 
+        else if (instance_place(centro_coelho_x, centro_coelho_y, obj_setaCima)) {
+            passo_x = 0;
+            passo_y = -tamanho_bloco;
+        } 
+        else if (instance_place(centro_coelho_x, centro_coelho_y, obj_setaBaixo)) {
+            passo_x = 0;
+            passo_y = tamanho_bloco;
+        }
+
+        // Remove a seta ocupada pelo coelho
+        with (seta_encontrada) {
+            instance_destroy();
+        }
+    }
 }
